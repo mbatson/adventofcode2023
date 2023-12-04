@@ -7,13 +7,13 @@ with open("input.txt", encoding="utf-8") as schematic:
         lines[i] = lines[i].strip()
 
     for i, line in enumerate(lines):
+        current_line = lines[i]
         if i == 0:
-            previous_line = "".join(["."]*10)
+            previous_line = "".join(["."]*len(current_line))
         else:
             previous_line = lines[i - 1]
-        current_line = lines[i]
         if i == len(lines) - 1:
-            next_line = "".join(["."]*10)
+            next_line = "".join(["."]*len(current_line))
         else:
             next_line = lines [i + 1]
 
